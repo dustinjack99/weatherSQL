@@ -17,9 +17,11 @@
   </PropertyGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore.design\3.1.8\build\netcoreapp2.0\Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore.design\3.1.8\build\netcoreapp2.0\Microsoft.EntityFrameworkCore.Design.props')" />
+    <Import Project="$(NuGetPackageRoot)javascriptengineswitcher.v8.native.win-x64\3.5.5\build\netcoreapp3.1\JavaScriptEngineSwitcher.V8.Native.win-x64.props" Condition="Exists('$(NuGetPackageRoot)javascriptengineswitcher.v8.native.win-x64\3.5.5\build\netcoreapp3.1\JavaScriptEngineSwitcher.V8.Native.win-x64.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\dusti\.nuget\packages\microsoft.codeanalysis.analyzers\2.9.4</PkgMicrosoft_CodeAnalysis_Analyzers>
     <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\dusti\.nuget\packages\microsoft.entityframeworkcore.tools\3.1.8</PkgMicrosoft_EntityFrameworkCore_Tools>
+    <PkgJavaScriptEngineSwitcher_V8_Native_win-x64 Condition=" '$(PkgJavaScriptEngineSwitcher_V8_Native_win-x64)' == '' ">C:\Users\dusti\.nuget\packages\javascriptengineswitcher.v8.native.win-x64\3.5.5</PkgJavaScriptEngineSwitcher_V8_Native_win-x64>
   </PropertyGroup>
 </Project>

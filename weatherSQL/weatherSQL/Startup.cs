@@ -12,6 +12,10 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using weatherSQL.Models;
+using Microsoft.AspNetCore.Http;
+using JavaScriptEngineSwitcher.V8;
+//using JavaScriptEngineSwitcher.Extensions.MsDependencyInjection;
+using React.AspNet;
 
 namespace weatherSQL
 {
@@ -27,9 +31,13 @@ namespace weatherSQL
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddReact();
+  //          services.AddJsEngineSwitcher(options => options.DefaultEngineName = V8JsEngine.EngineName)
+  //.AddV8();
             services.AddDbContext<WeatherContext>(opt =>
             opt.UseInMemoryDatabase("weather"));
-            services.AddControllers();
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,7 +47,8 @@ namespace weatherSQL
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
             app.UseHttpsRedirection();
 
             app.UseRouting();

@@ -9,7 +9,7 @@ using weatherSQL.Models;
 
 namespace weatherSQL.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[WorkDays]")]
     [ApiController]
     public class WeatherDaysController : ControllerBase
     {

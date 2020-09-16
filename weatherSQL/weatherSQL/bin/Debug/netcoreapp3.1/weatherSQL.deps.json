@@ -24,11 +24,14 @@
     ".NETCoreApp,Version=v3.1": {
       "weatherSQL/1.0.0": {
         "dependencies": {
+          "JavaScriptEngineSwitcher.V8": "3.5.5",
+          "JavaScriptEngineSwitcher.V8.Native.win-x64": "3.5.5",
           "Microsoft.EntityFrameworkCore.InMemory": "3.1.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8",
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.8",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.8",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.4",
+          "React.AspNet": "5.2.10",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -303,6 +306,100 @@
         },
         "compile": {
           "weatherSQL.dll": {}
+        }
+      },
+      "AdvancedStringBuilder/0.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/AdvancedStringBuilder.dll": {
+            "assemblyVersion": "0.1.0.0",
+            "fileVersion": "0.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AdvancedStringBuilder.dll": {}
+        }
+      },
+      "JavaScriptEngineSwitcher.Core/3.3.0": {
+        "dependencies": {
+          "AdvancedStringBuilder": "0.1.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/JavaScriptEngineSwitcher.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.0.0"
+          }
+        },
+        "resources": {
+          "lib/netstandard2.0/ru-ru/JavaScriptEngineSwitcher.Core.resources.dll": {
+            "locale": "ru-ru"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/JavaScriptEngineSwitcher.Core.dll": {}
+        }
+      },
+      "JavaScriptEngineSwitcher.V8/3.5.5": {
+        "dependencies": {
+          "AdvancedStringBuilder": "0.1.0",
+          "JavaScriptEngineSwitcher.Core": "3.3.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/ClearScript.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2.0"
+          },
+          "lib/netcoreapp3.1/JavaScriptEngineSwitcher.V8.dll": {
+            "assemblyVersion": "3.5.5.0",
+            "fileVersion": "3.5.5.0"
+          }
+        },
+        "resources": {
+          "lib/netcoreapp3.1/ru-ru/JavaScriptEngineSwitcher.V8.resources.dll": {
+            "locale": "ru-ru"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/ClearScript.dll": {},
+          "lib/netcoreapp3.1/JavaScriptEngineSwitcher.V8.dll": {}
+        }
+      },
+      "JavaScriptEngineSwitcher.V8.Native.win-x64/3.5.5": {
+        "runtimeTargets": {
+          "runtimes/win-x64/lib/netcoreapp3.1/ClearScriptV8-64.dll": {
+            "rid": "win-x64",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2.0"
+          },
+          "runtimes/win-x64/native/v8-base-x64.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/v8-x64.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/v8-zlib-x64.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "JSPool/4.0.0": {
+        "dependencies": {
+          "JavaScriptEngineSwitcher.Core": "3.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/JSPool.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/JSPool.dll": {}
         }
       },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -967,7 +1064,7 @@
       "Microsoft.IdentityModel.JsonWebTokens/5.5.0": {
         "dependencies": {
           "Microsoft.IdentityModel.Tokens": "5.5.0",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
@@ -1008,7 +1105,7 @@
       "Microsoft.IdentityModel.Protocols.OpenIdConnect/5.5.0": {
         "dependencies": {
           "Microsoft.IdentityModel.Protocols": "5.5.0",
-          "Newtonsoft.Json": "11.0.2",
+          "Newtonsoft.Json": "12.0.3",
           "System.IdentityModel.Tokens.Jwt": "5.5.0"
         },
         "runtime": {
@@ -1024,7 +1121,7 @@
       "Microsoft.IdentityModel.Tokens/5.5.0": {
         "dependencies": {
           "Microsoft.IdentityModel.Logging": "5.5.0",
-          "Newtonsoft.Json": "11.0.2",
+          "Newtonsoft.Json": "12.0.3",
           "System.Security.Cryptography.Cng": "4.5.0"
         },
         "runtime": {
@@ -1056,7 +1153,7 @@
       },
       "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.4": {
         "dependencies": {
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll": {
@@ -1072,7 +1169,7 @@
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "3.1.8",
           "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "3.1.4",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll": {
@@ -1134,7 +1231,7 @@
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "3.3.1",
           "Microsoft.VisualStudio.Web.CodeGeneration.Contracts": "3.1.4",
-          "Newtonsoft.Json": "11.0.2",
+          "Newtonsoft.Json": "12.0.3",
           "NuGet.Frameworks": "4.7.0"
         },
         "runtime": {
@@ -1222,11 +1319,11 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/12.0.3": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
-            "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.2.21924"
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
           }
         },
         "compile": {
@@ -1245,6 +1342,52 @@
         },
         "compile": {
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
+        }
+      },
+      "React.AspNet/5.2.10": {
+        "dependencies": {
+          "React.AspNet.Middleware": "5.2.10",
+          "React.Core": "5.2.10"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/React.AspNet.dll": {
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.10.3285"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/React.AspNet.dll": {}
+        }
+      },
+      "React.AspNet.Middleware/5.2.10": {
+        "dependencies": {
+          "React.Core": "5.2.10"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/React.AspNet.Middleware.dll": {
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.10.3285"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/React.AspNet.Middleware.dll": {}
+        }
+      },
+      "React.Core/5.2.10": {
+        "dependencies": {
+          "JSPool": "4.0.0",
+          "JavaScriptEngineSwitcher.Core": "3.3.0",
+          "Microsoft.Extensions.DependencyModel": "3.1.6",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/React.Core.dll": {
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.10.3285"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/React.Core.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -1750,7 +1893,7 @@
         "dependencies": {
           "Microsoft.IdentityModel.JsonWebTokens": "5.5.0",
           "Microsoft.IdentityModel.Tokens": "5.5.0",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
           "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll": {
@@ -4015,6 +4158,41 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AdvancedStringBuilder/0.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IbN3r5whlJvi8MhCDPVpIb+NVScyUcKSdcJZrnoXFDyzPDISl3AbWouNBYIHRdZdfGuzqCQEhM1vkxbIKqQVaQ==",
+      "path": "advancedstringbuilder/0.1.0",
+      "hashPath": "advancedstringbuilder.0.1.0.nupkg.sha512"
+    },
+    "JavaScriptEngineSwitcher.Core/3.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aY5dOsBsB7MO2twVRlRcvHBFdkXptIwjSobjPis+DiUi5Cq2YU6M8ICHzaQ1ZXHl7VyWrBMV7cTn98ZrI5ZMHQ==",
+      "path": "javascriptengineswitcher.core/3.3.0",
+      "hashPath": "javascriptengineswitcher.core.3.3.0.nupkg.sha512"
+    },
+    "JavaScriptEngineSwitcher.V8/3.5.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fJBxwf45310eEZnz4fTE4psNMrR9iyLmixg1AF9nxy1fyBpA7+4PM/gkDSZk3nTw+XZ10MlHrDXCzEYuIHKNaQ==",
+      "path": "javascriptengineswitcher.v8/3.5.5",
+      "hashPath": "javascriptengineswitcher.v8.3.5.5.nupkg.sha512"
+    },
+    "JavaScriptEngineSwitcher.V8.Native.win-x64/3.5.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sjTIXTrtQf7fficIFYhi0TK/li3husNAWkXzq4igvdZNx7eVUNM4F5UAkANJGSjPf7m7Gw1nrFGBc4kTB8nOiw==",
+      "path": "javascriptengineswitcher.v8.native.win-x64/3.5.5",
+      "hashPath": "javascriptengineswitcher.v8.native.win-x64.3.5.5.nupkg.sha512"
+    },
+    "JSPool/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-r+AeQ9R50HxU+HLqASYvZz6Mvg7RmZwEnCVhQ+xGYVexFjYYqlkW6by9HaflGaHjy+/28YLbb3qxDLRJ3AbZGQ==",
+      "path": "jspool/4.0.0",
+      "hashPath": "jspool.4.0.0.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
       "type": "package",
       "serviceable": true,
@@ -4414,12 +4592,12 @@
       "path": "netstandard.library/1.6.1",
       "hashPath": "netstandard.library.1.6.1.nupkg.sha512"
     },
-    "Newtonsoft.Json/11.0.2": {
+    "Newtonsoft.Json/12.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
-      "path": "newtonsoft.json/11.0.2",
-      "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
     },
     "NuGet.Frameworks/4.7.0": {
       "type": "package",
@@ -4427,6 +4605,27 @@
       "sha512": "sha512-qbXaB76XYUVLocLBs8Z9TS/ERGK2wm797feO+0JEPFvT7o7MRadOR77mqaSD4J1k8G+DlZQyq+MlkCuxrkr3ag==",
       "path": "nuget.frameworks/4.7.0",
       "hashPath": "nuget.frameworks.4.7.0.nupkg.sha512"
+    },
+    "React.AspNet/5.2.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ejE2nl2zx+W+/SSQ4I8E1bDifqcNxf4FDlKa8iXBHZni0Gr1L1exIbynqnFOJgyBFiJWrPucZC52fHBAZlnqVw==",
+      "path": "react.aspnet/5.2.10",
+      "hashPath": "react.aspnet.5.2.10.nupkg.sha512"
+    },
+    "React.AspNet.Middleware/5.2.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vTqUr7P/jPI6u3SIgF0upUlJeNcqLkjEBs1XKtCJ0635fJCh7zEZLFRaO3D1mqzu9v2g28HiiC+rivQEM6mppA==",
+      "path": "react.aspnet.middleware/5.2.10",
+      "hashPath": "react.aspnet.middleware.5.2.10.nupkg.sha512"
+    },
+    "React.Core/5.2.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GBXCuWOwjCr6bci39G+gCQaGcIc+qLDccRoYeDKMyzFh+1Xc95Z7xCp6qcRusS9fr1qNQi5IuQpWX4HbaNxnjg==",
+      "path": "react.core/5.2.10",
+      "hashPath": "react.core.5.2.10.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",

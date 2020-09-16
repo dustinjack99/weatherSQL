@@ -38,6 +38,18 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "JavaScriptEngineSwitcher.Extensions.MsDependencyInjection": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
+            "JavaScriptEngineSwitcher.V8": {
+              "target": "Package",
+              "version": "[3.5.5, )"
+            },
+            "JavaScriptEngineSwitcher.V8.Native.win-x64": {
+              "target": "Package",
+              "version": "[3.5.5, )"
+            },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[3.1.8, )"
@@ -59,6 +71,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.4, )"
+            },
+            "React.AspNet": {
+              "target": "Package",
+              "version": "[5.2.10, )"
             }
           },
           "imports": [
