@@ -55,3 +55,4 @@ C:\Users\dusti\Desktop\projects\weatherSQL\ReactDB\ReactDB\obj\Debug\netcoreapp3
 C:\Users\dusti\Desktop\projects\weatherSQL\ReactDB\ReactDB\obj\Debug\netcoreapp3.1\ReactDB.pdb
 C:\Users\dusti\Desktop\projects\weatherSQL\ReactDB\ReactDB\obj\Debug\netcoreapp3.1\ReactDB.genruntimeconfig.cache
 C:\Users\dusti\Desktop\projects\weatherSQL\ReactDB\ReactDB\bin\Debug\netcoreapp3.1\package.json
+C:\Users\dusti\Desktop\projects\weatherSQL\ReactDB\ReactDB\bin\Debug\netcoreapp3.1\package-lock.json

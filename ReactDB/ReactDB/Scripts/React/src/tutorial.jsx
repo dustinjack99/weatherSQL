@@ -28,7 +28,7 @@ class WeatherBox extends React.Component {
     }
 
     componentDidMount() {
-        this.loadCommentsFromServer();
+        this.loadDaysFromServer();
         
     }
 

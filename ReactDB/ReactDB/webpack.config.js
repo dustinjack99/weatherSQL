@@ -1,9 +1,14 @@
-﻿module.exports = {
+﻿const path = require("path");
+
+module.exports = {
     context: __dirname,
     entry: "./Scripts/React/src/tutorial.jsx",
     output: {
-        path: "./wwwroot/js",
+        path: path.resolve(__dirname, "wwwroot"),
         filename: "bundle.js",
+    },
+    resolve: {
+        extensions: [".js", ".jsx"]
     },
     watch: true,
     module: {
