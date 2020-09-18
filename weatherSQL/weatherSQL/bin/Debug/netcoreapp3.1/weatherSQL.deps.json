@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "weatherSQL/1.0.0": {
         "dependencies": {
+          "JavaScriptEngineSwitcher.Extensions.MsDependencyInjection": "3.3.0",
           "JavaScriptEngineSwitcher.V8": "3.5.5",
           "JavaScriptEngineSwitcher.V8.Native.win-x64": "3.5.5",
           "Microsoft.EntityFrameworkCore.InMemory": "3.1.8",
@@ -336,6 +337,21 @@
         },
         "compile": {
           "lib/netstandard2.0/JavaScriptEngineSwitcher.Core.dll": {}
+        }
+      },
+      "JavaScriptEngineSwitcher.Extensions.MsDependencyInjection/3.3.0": {
+        "dependencies": {
+          "JavaScriptEngineSwitcher.Core": "3.3.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.8"
+        },
+        "runtime": {
+          "lib/netstandard2.0/JavaScriptEngineSwitcher.Extensions.MsDependencyInjection.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/JavaScriptEngineSwitcher.Extensions.MsDependencyInjection.dll": {}
         }
       },
       "JavaScriptEngineSwitcher.V8/3.5.5": {
@@ -4171,6 +4187,13 @@
       "sha512": "sha512-aY5dOsBsB7MO2twVRlRcvHBFdkXptIwjSobjPis+DiUi5Cq2YU6M8ICHzaQ1ZXHl7VyWrBMV7cTn98ZrI5ZMHQ==",
       "path": "javascriptengineswitcher.core/3.3.0",
       "hashPath": "javascriptengineswitcher.core.3.3.0.nupkg.sha512"
+    },
+    "JavaScriptEngineSwitcher.Extensions.MsDependencyInjection/3.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3jGJS7bSzXN6r1ejDjfNP2noGJGJYkb5nyIsxn/dRqStGda7kHxFPI2ONMlnWdXyfhFl5CAlseLk37lb54+6Iw==",
+      "path": "javascriptengineswitcher.extensions.msdependencyinjection/3.3.0",
+      "hashPath": "javascriptengineswitcher.extensions.msdependencyinjection.3.3.0.nupkg.sha512"
     },
     "JavaScriptEngineSwitcher.V8/3.5.5": {
       "type": "package",
