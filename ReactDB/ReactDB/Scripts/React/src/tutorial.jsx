@@ -4,7 +4,6 @@ import WeatherForm from './components/WeatherForm';
 class WeatherBox extends React.Component {
     constructor(props){
         super(props);
-        this.state = { data: [] };
 
         this.loadDaysFromServer.bind(this);
     }
@@ -22,7 +21,7 @@ class WeatherBox extends React.Component {
         xhr.open('get', this.props.url, true);
         xhr.onload = () => {
             const data = JSON.parse(xhr.responseText);
-            this.setState({ data: data });
+            console.log(data)
         };
         xhr.send();
     }

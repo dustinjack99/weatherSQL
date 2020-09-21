@@ -9,7 +9,6 @@ class WeatherForm extends React.Component {
             cityForecast: []
         }
 
-       
     }
 
     handleChange(e) {
@@ -19,7 +18,7 @@ class WeatherForm extends React.Component {
 
     onSubmit(e) {
         e.preventDefault();
-        const apiKey = `https://api.openweathermap.org/data/2.5/forecast?q=${this.state.city}&appid=e5e28d699069f90b230ad4d66e6a33b1`;
+        const apiKey = `https://api.openweathermap.org/data/2.5/forecast/daily?q=${this.state.city}&cnt=7&appid=e5e28d699069f90b230ad4d66e6a33b1`;
         axios.get(apiKey).then(data => {
             const cityForecast = data.data.list;
             this.setState({ cityForecast });

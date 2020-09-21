@@ -18,20 +18,11 @@ namespace ReactDB.Controllers
                 new WeatherModel
                 {
                     Id = 1,
-                    Author = "Daniel Lo Nigro",
-                    Text = "Hello ReactJS.NET World!"
-                },
-                new WeatherModel
-                {
-                    Id = 2,
-                    Author = "Pete Hunt",
-                    Text = "This is one comment"
-                },
-                new WeatherModel
-                {
-                    Id = 3,
-                    Author = "Jordan Walke",
-                    Text = "This is *another* comment"
+                    City = "Los Angeles",
+                    DateTime = "2020 Sometime",
+                    Temp = 204.5,
+                    TempFeel = 213.8,
+                    Weather = "Clouds"
                 },
             };
         }

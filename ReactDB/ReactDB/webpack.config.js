@@ -2,7 +2,7 @@
 
 module.exports = {
     context: __dirname,
-    entry: "./Scripts/React/src/tutorial.jsx",
+    entry: "./Scripts/React/src/",
     output: {
         path: path.resolve(__dirname, "wwwroot"),
         filename: "bundle.js",
