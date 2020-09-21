@@ -12,10 +12,9 @@ namespace testreact.Models
     {
 
         [Key]
-        [Required]
+      
         public int Id { get; set; }
-        [Required]
-        public string City { get; set; }
+  
         public double Temp { get; set; }
         public double TempFeel { get; set; }
         public string DateTime { get; set; }

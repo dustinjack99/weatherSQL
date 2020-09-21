@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 export class FetchData extends Component {
   static displayName = FetchData.name;
@@ -27,10 +28,10 @@ export class FetchData extends Component {
         <tbody>
           {forecasts.map(forecast =>
             <tr key={forecast.date}>
-              <td>{forecast.date}</td>
-              <td>{forecast.temperatureC}</td>
-              <td>{forecast.temperatureF}</td>
-              <td>{forecast.summary}</td>
+              <td>{forecast.dateTime}</td>
+              <td>{forecast.temp}</td>
+              <td>{forecast.tempFeel}</td>
+              <td>{forecast.weather}</td>
             </tr>
           )}
         </tbody>
@@ -53,8 +54,9 @@ export class FetchData extends Component {
   }
 
   async populateWeatherData() {
-    const response = await fetch('weatherforecast');
+    const response = await axios.get('api/WeatherAPI');
     const data = await response.json();
-    this.setState({ forecasts: data, loading: false });
+      this.setState({ forecasts: data, loading: false });
+      console.log(this.state.forecasts);
   }
 }

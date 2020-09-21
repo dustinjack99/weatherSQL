@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using testreact.Models;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace testreact
 {
@@ -30,6 +31,8 @@ namespace testreact
             {
                 configuration.RootPath = "ClientApp/build";
             });
+
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +54,10 @@ namespace testreact
             app.UseSpaStaticFiles();
 
             app.UseRouting();
+            app.UseSwagger();
+            app.UseSwaggerUI(options => {
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "OI APIs v1");
+            });
 
             app.UseEndpoints(endpoints =>
             {
@@ -68,6 +75,7 @@ namespace testreact
                     spa.UseReactDevelopmentServer(npmScript: "start");
                 }
             });
+
         }
     }
 }

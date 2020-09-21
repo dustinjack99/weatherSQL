@@ -77,7 +77,7 @@ namespace testreact.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<WeatherModel>> PostWeatherModel(WeatherModel weatherModel)
+        public async Task<ActionResult<WeatherModel>> PostWeatherModel([FromBody] WeatherModel weatherModel)
         {
             _context.weatherdata.Add(weatherModel);
             await _context.SaveChangesAsync();

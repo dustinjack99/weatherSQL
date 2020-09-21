@@ -24,6 +24,22 @@ class WeatherForm extends Component {
             const cityForecast = data.data.list;
             this.setState({ cityForecast });
             console.log(this.state.cityForecast);
+
+            let weatherPost;
+
+            data.data.list.map((hour, i) => {
+                weatherPost = {
+                 
+                    "temp": hour.main.temp,
+                    "tempFeel": hour.main.feels_like,
+                    "dateTime": hour.dt_txt,
+                    "weather": hour.weather[0].main
+                }
+
+                console.log(weatherPost);
+                axios.post('/api/WeatherAPI', { weatherPost });
+            });
+
         });
     }
 
