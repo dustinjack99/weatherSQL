@@ -3,39 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using ReactDB.Models;
 
 namespace ReactDB.Controllers
 {
-    public class HomeController : Controller
+    [ApiController]
+    [Route("[controller]")]
+    public class WeatherForecastController : ControllerBase
     {
-        private static readonly IList<WeatherModel> _comments;
-
-        static HomeController()
+        private static readonly string[] Summaries = new[]
         {
-            _comments = new List<WeatherModel>
+            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+        };
+
+        private readonly ILogger<WeatherForecastController> _logger;
+
+        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        {
+            _logger = logger;
+        }
+
+        [HttpGet]
+        public IEnumerable<WeatherModel> Get()
+        {
+            var rng = new Random();
+            return Enumerable.Range(1, 5).Select(index => new WeatherModel
             {
-                new WeatherModel
-                {
-                    Id = 1,
-                    City = "Los Angeles",
-                    DateTime = "2020 Sometime",
-                    Temp = 204.5,
-                    TempFeel = 213.8,
-                    Weather = "Clouds"
-                },
-            };
-        }
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        [Route("comments")]
-        [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
-        public ActionResult Comments()
-        {
-            return Json(_comments);
+                Date = DateTime.Now.AddDays(index),
+                TemperatureC = rng.Next(-20, 55),
+                Summary = Summaries[rng.Next(Summaries.Length)]
+            })
+            .ToArray();
         }
     }
 }
